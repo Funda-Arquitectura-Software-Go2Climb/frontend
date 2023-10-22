@@ -1,0 +1,53 @@
+<body>
+    <div class="cards">
+        <div class="titulo-list-card">
+            Lista de Agencias
+        </div>
+        <div class="list-card">
+
+            <div class="card" *ngFor="let agency of agencies; let i = index">
+                <img class="imagen-card" [src]="agency.logo" alt="">
+                <div class="descripcion">
+                    <div class="encabezado">
+                        <div class="nombre">
+                            {{agency.nombre}}
+                        </div>
+                        <div class="estrellas">
+                            <mat-icon class="estrella">star</mat-icon>
+                            <mat-icon class="estrella">star</mat-icon>
+                            <mat-icon class="estrella">star</mat-icon>
+                            <mat-icon class="estrella">star</mat-icon>
+                            <mat-icon class="estrella">star</mat-icon>
+                        </div>
+                    </div>
+
+                    <div class="correo">
+                        {{agency.correo}}
+                    </div>
+                    <div class="descripcion-agency">
+                        {{agency.descripcion}}
+                    </div>
+                    <div class="datos">
+                        <div class="item">
+                            <div class="negrita">Ubicacion</div>
+                            <p>{{agency.ubicacion}}</p>
+                        </div>
+                        <div class="item">
+                            <div class="negrita">RUC</div>
+                            <p>{{agency.ruc}}</p>
+                        </div>
+                        <div class="item">
+                            <div class="negrita">Telefono</div>
+                            <p>{{agency.telefono}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="boton-viajes" (click)="search(agency.id)">
+                    ver viajes
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>

@@ -1,0 +1,88 @@
+<body>
+    <div class="cards">
+        <div class="titulo">
+            {{travel.titulo}}
+        </div>
+        <div class="columna1">
+            <div class="lugar columna2">
+                <mat-icon class="point">radio_button_checked</mat-icon>
+                <div class="lugar-nombre subtitulo">{{travel.lugar}}</div>
+            </div>
+            <div class="estrellas">
+                <mat-icon class="estrella">star</mat-icon>
+                <mat-icon class="estrella">star</mat-icon>
+                <mat-icon class="estrella">star</mat-icon>
+                <mat-icon class="estrella">star</mat-icon>
+                <mat-icon class="estrella">star</mat-icon>
+            </div>
+        </div>
+        <div class="portada-imagenes">
+            <div class="imagen-1">
+                <img class="imagen1" [src]="travel.photo1" alt="">
+            </div>
+            <div class="imagenes-2-5">
+                <div class="imagenes-2-3 columna-2-imagenes">
+                    <img class="imagenes-secundarias primero" [src]="travel.photo2" alt="">
+                    <img class="imagenes-secundarias segundo" [src]="travel.photo3" alt="">
+                </div>
+                <div class="imagenes-4-5 columna-2-imagenes">
+                    <img class="imagenes-secundarias tercero" [src]="travel.photo4" alt="">
+                    <img class="imagenes-secundarias cuarto" [src]="travel.photo5" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="columnas222">
+            <div class="columna3">
+                <img [src]="travel.logo" alt="">
+                <div class="descripcion-columna3">
+                    <div class="titulo-columna3">
+                        <div class="ofrecido">
+                            Ofrecido por
+                        </div>
+                        <div class="negrita" style="margin-left: 0.5rem;">
+                            {{agency.nombre}}
+                        </div>
+                    </div>
+                    <div class="fecha-registro">
+                        {{travel.fechaRegistro}}
+                    </div>
+                </div>
+                <div class="precio">
+                    $ 480.00
+                </div>
+            </div>
+            <div></div>
+        </div>
+        <div class="descripcion-final">
+            {{travel.descripcion}}
+        </div>
+    </div>
+    <div class="columna_2">
+
+        <div class="izquierda">
+            <div class="negrita">Las actividades que realizarás</div>
+
+            <div class="lista_tips" *ngFor="let activity of travel.activities; let i = index">
+                <div class="point_container">
+                    <mat-icon class="point">radio_button_checked</mat-icon>
+                </div>
+                <div class="titulo_activite" >
+                    <div class="negrita_activity">{{activity.titulo}}</div>
+                    <div class="descripcion_activity">{{activity.descripcion}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="derecha">
+            <div class="negrita">Es bueno saberlo</div>
+            <div class="lista_tips">
+                <mat-icon class="point">radio_button_checked</mat-icon>
+                <div class="titulo_activite">
+                    <div class="descripcion_activity">Con un guía partiremos desde la planta del nevado hasta 100m sobre
+                        esta. Con un guía partiremos desde la planta del nevado hasta 100m sobre esta.</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

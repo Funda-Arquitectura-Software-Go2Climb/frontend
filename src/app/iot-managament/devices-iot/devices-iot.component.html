@@ -1,0 +1,38 @@
+<body>
+    <div class="cards">
+        <div class="titulo-list-card">
+            Lista de Agencias
+        </div>
+        <div class="list-card">
+            <div class="card" *ngFor="let card of cards">
+                <img class="imagen-card" [src]="card.imageUrl" alt="Card Image">
+                <div class="descripcion">
+                    <div class="encabezado">
+                        <div class="nombre">
+                            {{ card.name }}
+                        </div>
+                        <div class="estrellas">
+                            <ng-container *ngFor="let i of [].constructor(card.starRating)">
+                                <mat-icon class="estrella">star</mat-icon>
+                            </ng-container>
+                        </div>
+                    </div>
+                    
+                    <div class="descripcion-agency">
+                        {{ card.description }}
+                    </div>
+                    <div class="datos">
+                        <div class="item">
+                            <div class="negrita">Price</div>
+                            <p>$ {{ card.price }}</p>
+                        </div>
+                        <div class="item">
+                            <div class="negrita">Marca</div>
+                            <p>{{ card.marca }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,227 @@
+body{
+    padding: 2rem;
+    margin: 0;
+    background-color: #EDEDED;
+    font-family: Arial, sans-serif;
+    height: auto;
+}
+
+.cards{
+    height: auto;
+    background-color: #ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.titulo{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.columna1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.point_container{
+    align-items: center;
+    text-align: center;
+}
+
+.point{
+    color: #338DD6;
+    margin-left: 30%;
+}
+
+.estrellas{
+    height: auto;
+    width: 35%;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+}
+
+.estrella{
+    color: #FFD700;
+    font-size: 25px;
+    height: auto;
+    width: auto;
+}
+
+.columna2{
+    display: grid;
+    grid-template-columns: 5% 95%;
+    align-items: center;
+}
+
+
+.subtitulo{
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+/* portada imagenes*/
+.portada-imagenes{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 5px;
+    width: 100%;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.imagen-1, .imagenes-2-5 {
+    overflow: hidden;
+}
+
+.imagen-1 img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* especial */
+.imagen1 img{
+    width: 100%;
+    height: auto;
+}
+
+.imagenes-2-5{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+    height: 100%;
+}
+
+.columna-2-imagenes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    height: 100%;
+}
+
+
+/* especial */
+.imagenes-secundarias{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* fin portada */
+.columnas222{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+
+.columna3{
+    display: grid;
+    width: auto;
+    grid-template-columns: 1fr 5fr 2fr;
+    gap: 5px;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+}
+
+.titulo-columna3{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.columna3 img{
+    height: auto;
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    border-radius: 100%;
+}
+
+.ofrecido{
+    color: #A6A6A6;
+    font-weight: 600;
+}
+
+.negrita{
+    font-weight: 600;
+}
+
+.descripcion-columna3{
+    margin-right: auto;
+}
+
+.fecha-registro{
+    margin-top: 0.3rem;
+}
+
+.precio{
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+.descripcion-final{
+    margin-top: 1rem;
+    font-size: 18px;
+}
+
+
+/* segundo card */
+.columna_2{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+    width: 83%;
+    /* importante */
+    align-items: stretch; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.derecha{
+    margin-left: auto;
+    width: 90%;
+    display: block;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.izquierda{
+    margin-right: auto;
+    width: 90%;
+    display: block;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.lista_tips{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-top: 1rem;
+}
+
+.negrita_activity{
+    font-size: 14px;
+    font-weight: 700;
+}

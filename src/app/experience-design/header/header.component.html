@@ -1,0 +1,35 @@
+<header>
+    <img src="../../../assets/images/logoSecundari.jpg" alt="">
+
+    
+
+    <div class="menus">
+        <button class="boton-icon" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon class="icon-header">menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <mat-icon>person</mat-icon>
+                <span>Mi perfil</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>logout</mat-icon>
+                <span>Cerrar session</span>
+            </button>
+            <button mat-menu-item routerLink="/list-devices-iot">
+                <mat-icon>devices</mat-icon>
+                <span>Devices IoT</span>
+            </button>
+        </mat-menu>
+        <div class="items">Inicio</div>
+        <div class="items" routerLink="/list-travels">Lista de viajes</div>
+        <div class="items" routerLink="/list-agencies">Lista de agencias</div>
+    </div>
+
+
+    <div class="search">
+        <input type="text" class="search-input" placeholder=" ">
+            <mat-icon class="icon-search">search</mat-icon>
+    </div>
+
+</header>

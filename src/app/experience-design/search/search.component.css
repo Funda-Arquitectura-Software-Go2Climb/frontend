@@ -1,0 +1,117 @@
+body{
+    padding: 2rem;
+    margin: 0;
+    background-color: #EDEDED;
+    font-family: Arial, sans-serif;
+    height: auto;
+}
+
+.cards{
+    height: auto;
+    background-color: #ffffff;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.titulo-list-card{
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.list-card{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0.15rem solid transparent;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+}
+
+.card:hover{
+    background-color: #EDEDED;
+    border: 0.15rem solid #000000;
+}
+
+/* card */
+.imagen-card{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descripcion{
+    font-size: 20px;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.estrellas{
+    height: auto;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.estrella{
+    color: #FFD700;
+    font-size: 25px;
+    height: auto;
+    width: auto;
+}
+
+.precio{
+    margin-top: 5%;
+    font-size: 28px;
+    font-weight: 600;
+    justify-content: center;
+    text-align: center;
+}
+
+.no-found{
+    background-color: #9CD4E7;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.empty{
+    font-size: 60px;
+    color: #000000;
+    font-size: 60px;
+    line-height: 1.5;
+}
+
+.subarayado{
+    text-decoration: underline;
+}
