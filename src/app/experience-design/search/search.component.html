@@ -10,7 +10,7 @@
         <div   class="list-card">
 
             <div class="card" *ngFor="let travel of this.travelsAux; let i = index" (click)="seeDetails(travel.serviceId)">
-                <img class="imagen-card" [src]="travel.photoLogo" alt="">
+                <img class="imagen-card" [src]="travel.photos" alt="">
                 <div class="descripcion">{{descriptions[i]}}</div>
                 <div class="estrellas">
                     <mat-icon class="estrella" >star</mat-icon>

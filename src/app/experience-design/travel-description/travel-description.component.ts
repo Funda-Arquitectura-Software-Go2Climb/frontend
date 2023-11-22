@@ -23,33 +23,13 @@ export class TravelDescriptionComponent implements OnInit {
     private microServiceService: MicroServiceService
     ) {
       this.travelId = localStorage.getItem("indice-travel")
-    console.log("localstorage: ");
-    console.log(this.travelId);
   }
   ngOnInit(): void {
     this.getService();
   }
 
-  // getTravel() {
-  //   const aux: any = localStorage.getItem("indice-travel")
-  //   // this.indice = parseInt(aux)
-  //   this.travelService.getById(aux).subscribe(
-  //     (travel) => {
-        
-  //       this.travel = travel;
-  //       console.log(this.travel)
-  //       this.iniciarMap();
-  //     },
-  //     (error) => {
-  //       console.error('Error al obtener los viajes:', error);
-  //     }
-  //   );
-  // }
-  
-
   getService() {
-    // const aux: any = localStorage.getItem("indice-service")
-    // this.indice = parseInt(aux)
+    this.travelId = localStorage.getItem("indice-travel")
     this.microServiceService.getServiceById(this.travelId).subscribe(
       (service) => {
         this.travel = service;

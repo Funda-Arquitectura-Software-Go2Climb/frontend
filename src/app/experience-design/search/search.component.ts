@@ -50,8 +50,8 @@ export class SearchComponent implements OnInit{
   seeDetails(id:any){
     
     localStorage.removeItem("indice-travel")
-        localStorage.setItem("indice-travel",id.toString())
-        this.router.navigate(["/travel-description"])
+    localStorage.setItem("indice-travel",id.toString())
+    this.router.navigate(["/travel-description"])
   }
 
 }

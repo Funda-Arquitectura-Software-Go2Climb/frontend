@@ -8,7 +8,6 @@ import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-
 import {RegisterFormComponent} from "./auth/components/register-form/register-form.component";
 import {PricingPageComponent} from "./experience-design/pages/pricing-page/pricing-page.component";
 import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './xperience-desing/home/home.component';
 import { SeguridadGuard } from './seguridad.guard';
 
 
