@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AgencyService } from 'src/app/experience-design/agencies/agency.service';
-import { CreateTravelComponent } from 'src/app/experience-design/create-travel/create-travel.component';
-import { TravelService } from 'src/app/experience-design/travels/travel.service';
-import { Agency } from 'src/app/models/agency';
-import { Travel } from 'src/app/models/travel';
+import { MicroAgency } from 'src/app/models/micros/microagency';
+import { MicroAgencyService } from 'src/app/services/micro-agency.service';
+import { MicroServiceService } from 'src/app/services/micro-service.service';
 
 @Component({
   selector: 'app-profile-agency',
@@ -13,22 +11,36 @@ import { Travel } from 'src/app/models/travel';
   styleUrls: ['./profile-agency.component.css']
 })
 export class ProfileAgencyComponent implements OnInit {
-  agency: Agency = {};
+  agency: MicroAgency = {};
 
   indice: number = 0;
 
-  constructor(private travelService: TravelService,private agencyService: AgencyService, private router: Router,
+  constructor(private router: Router,
     public dialog: MatDialog,
+    private microAgencyService: MicroAgencyService,
+    private microServiceService: MicroServiceService
     ) { }
 
   ngOnInit() {
-    this.getAgency();
+    this.getMicroAgency();
   }
 
   
 
-  getAgency() {
-    this.agencyService.getByid(1).subscribe(
+  // getAgency() {
+  //   this.agencyService.getByid(1).subscribe(
+  //     (response) => {
+  //       this.agency = response;
+  //       console.log(this.agency);
+  //     },
+  //     (error) => {
+  //       console.error('Error al obtener la agencia:', error);
+  //     }
+  //   );
+  // }
+
+  getMicroAgency() {
+    this.microAgencyService.getAgencyById(6).subscribe(
       (response) => {
         this.agency = response;
         console.log(this.agency);
@@ -39,29 +51,7 @@ export class ProfileAgencyComponent implements OnInit {
     );
   }
   
-  openCreateTravelDialog(): void {
-    const dialogRef = this.dialog.open(CreateTravelComponent, {
-      width: 'auto',
-    });
-  
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('El diálogo se cerró');
-      this.getAgency();
-    });
-    
-  }
 
-  deleteTravel(id: any) {
-    this.travelService.deleteTravel(id).subscribe(
-      (response) => {
-        console.log(response);
-        this.getAgency();
-      },
-      (error) => {
-        console.error('Error al eliminar el viaje:', error);
-      }
-    );
-  }
 
   seeDetails(i:any){
     localStorage.removeItem("indice-travel")

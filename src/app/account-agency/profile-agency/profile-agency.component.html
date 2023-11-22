@@ -8,27 +8,10 @@
                         {{agency.name}}
                     </div>
                     <div class="estrellas">
-                        <!-- <mat-icon class="estrella">star</mat-icon>
-                        <mat-icon class="estrella">star</mat-icon>
-                        <mat-icon class="estrella">star</mat-icon>
-                        <mat-icon class="estrella">star</mat-icon>
-                        <mat-icon class="estrella">star</mat-icon> -->
                     </div>
                 </div>
                 <div class="divide">
                     <div class="descripcion">
-                        <!-- <div class="encabezado">
-                            <div class="nombre">
-                                {{agency.nombre}}
-                            </div>
-                            <div class="estrellas">
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                                <mat-icon class="estrella">star</mat-icon>
-                            </div>
-                        </div> -->
 
                         <div class="correo">
                             {{agency.email}}
@@ -41,24 +24,11 @@
                             {{agency.description}}
                             {{agency.description}}
                         </div>
-                        <div class="datos">
-                            <div class="item">
-                                <div class="negrita">Ubicacion</div>
-                                <p>{{agency.location}}</p>
-                            </div>
-                            <div class="item">
-                                <div class="negrita">RUC</div>
-                                <p>{{agency.ruc}}</p>
-                            </div>
-                            <div class="item">
-                                <div class="negrita">Telefono</div>
-                                <p>{{agency.numberPhone}}</p>
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <div class="logo_stars">
-                        <img class="imagen-card" [src]="agency.photoUrl" alt="">
+                        <img class="imagen-card" [src]="agency.photo" alt="">
                         <div class="">
                             <div class="estrellas">
                                 <mat-icon class="estrella">star</mat-icon>
@@ -68,6 +38,21 @@
                                 <mat-icon class="estrella">star</mat-icon>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class="datos">
+                    <div class="item">
+                        <div class="negrita">Ubicacion</div>
+                        <p>{{agency.location}}</p>
+                    </div>
+                    <div class="item">
+                        <div class="negrita">RUC</div>
+                        <p>{{agency.ruc}}</p>
+                    </div>
+                    <div class="item">
+                        <div class="negrita">Telefono</div>
+                        <p>{{agency.phoneNumber}}</p>
                     </div>
                 </div>
 
@@ -81,23 +66,15 @@
                 <div class="titulo-list-card-travel">
                     Lista de viajes disponibles
                 </div>
-                <button mat-raised-button color="primary"
-                    style="background-color: #ace9fd; color: #000000; font-size: 14px;"
-                    (click)="openCreateTravelDialog()">Nuevo viaje</button>
+                <div class=""></div>
             </div>
 
             <div class="list-card-travel">
 
-                <div class="card-travel" *ngFor="let travel of agency.travels">
-                    <div class="" (click)="seeDetails(travel.id)">
-                        <img class="imagen-card-travel" [src]="travel.photoLogo" alt="">
-                        <div class="descripcion-travel">{{travel.description}}</div>
+                <div class="card-travel" *ngFor="let travel of agency.services">
+                    <div class="" (click)="seeDetails(travel.serviceId)">
+                        <img class="imagen-card-travel" [src]="travel.photos" alt="">
                         <div class="estrellas-travel">
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
-                            <mat-icon class="estrella-travel">star</mat-icon>
                         </div>
                         <div class="precio-travel">
                             $ {{travel.price}}.00
@@ -105,8 +82,7 @@
                     </div>
 
                     <div class="delete">
-                        <button mat-raised-button color="warn" style="color: #ffffff; font-size: 14px;"
-                            (click)="deleteTravel(travel.id)">delete</button>
+                        
                     </div>
                 </div>
 

@@ -19,7 +19,7 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   onSubmit() {
-    if (this.username === 'admin' && this.password === 'admin') {
+    if (this.username === 'jerry@gmail.com' && this.password === 'jerry') {
       this.router.navigate(['/home']);
     } else {
       alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';import { AgencyService } from './agency.service';
-import { Agency } from 'src/app/models/agency';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MicroAgencyService } from '../../services/micro-agency.service';
+import { MicroAgency } from 'src/app/models/micros/microagency';
 
 @Component({
   selector: 'app-agencies',
@@ -8,19 +9,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./agencies.component.css']
 })
 export class AgenciesComponent implements OnInit {
-  agencies: Agency[] = []; 
+  microAgencies: MicroAgency[] = [];
 
-  constructor(private agencyService: AgencyService, private router: Router) { }
+  constructor(private router: Router,
+    private microAgencyService: MicroAgencyService) { }
 
   ngOnInit() {
-    this.getAgencies();
+    this.getMicroAgencies();
   }
 
-  getAgencies() {
-    this.agencyService.getAgencies().subscribe(
+
+  getMicroAgencies() {
+    this.microAgencyService.getAllAgencies().subscribe(
       (agencies) => {
-        this.agencies = agencies;
-        console.log(this.agencies)
+        this.microAgencies = agencies;
+        console.log(this.microAgencies)
       },
       (error) => {
         console.error('Error al obtener las agencias:', error);

@@ -5,12 +5,12 @@
         </div>
         <div class="list-card">
 
-            <div class="card" *ngFor="let agency of agencies; let i = index">
-                <img class="imagen-card" [src]="agency.photoUrl" alt="">
+            <div class="card" *ngFor="let microagency of microAgencies; let i = index">
+                <img class="imagen-card" [src]="microagency.photo" alt="">
                 <div class="descripcion">
                     <div class="encabezado">
                         <div class="nombre">
-                            {{agency.name}}
+                            {{microagency.name}}
                         </div>
                         <div class="estrellas">
                             <mat-icon class="estrella">star</mat-icon>
@@ -22,27 +22,27 @@
                     </div>
 
                     <div class="correo">
-                        {{agency.email}}
+                        {{microagency.email}}
                     </div>
                     <div class="descripcion-agency">
-                        {{agency.description}}
+                        {{microagency.description}}
                     </div>
                     <div class="datos">
                         <div class="item">
                             <div class="negrita">Ubicacion</div>
-                            <p>{{agency.location}}</p>
+                            <p>{{microagency.location}}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">RUC</div>
-                            <p>{{agency.ruc}}</p>
+                            <p>{{microagency.ruc}}</p>
                         </div>
                         <div class="item">
                             <div class="negrita">Telefono</div>
-                            <p>{{agency.numberPhone}}</p>
+                            <p>{{microagency.phoneNumber}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="boton-viajes" (click)="search(agency.id)">
+                <div class="boton-viajes" (click)="search(microagency.id)">
                     ver viajes
                 </div>
             </div>

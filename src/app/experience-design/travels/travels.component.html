@@ -5,8 +5,8 @@
         </div>
         <div   class="list-card">
 
-            <div class="card" *ngFor="let travel of travels; let i = index" (click)="seeDetails(travel.id)">
-                <img class="imagen-card" [src]="travel.photoLogo" alt="">
+            <div class="card" *ngFor="let service of services; let i = index" (click)="seeDetails(service.serviceId)">
+                <img class="imagen-card" [src]="service.photos" alt="">
                 <div class="descripcion">{{descriptions[i]}}</div>
                 <div class="estrellas">
                     <mat-icon class="estrella" >star</mat-icon>
@@ -16,7 +16,7 @@
                     <mat-icon class="estrella">star</mat-icon>
                 </div>
                 <div class="precio">
-                    {{travel.price}}
+                    {{service.price}}
                 </div>
             </div>
 

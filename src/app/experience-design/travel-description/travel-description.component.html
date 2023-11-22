@@ -18,40 +18,22 @@
         </div>
         <div class="portada-imagenes">
             <div class="imagen-1">
-                <img class="imagen1" [src]="travel.photoPortada" alt="">
+                <img class="imagen1" [src]="travel.photos" alt="">
             </div>
             <div class="imagenes-2-5">
-                <div class="imagenes-2-3 columna-2-imagenes">
-                    <img class="imagenes-secundarias primero" [src]="travel.photo2" alt="">
-                    <img class="imagenes-secundarias segundo" [src]="travel.photo3" alt="">
-                </div>
-                <div class="imagenes-4-5 columna-2-imagenes">
-                    <img class="imagenes-secundarias tercero" [src]="travel.photo4" alt="">
-                    <img class="imagenes-secundarias cuarto" [src]="travel.photo1" alt="">
-                </div>
+                <div id="map" class="map_"></div>
             </div>
         </div>
         <div class="columnas222">
             <div class="columna3">
-                <img [src]="travel.agency.photoUrl" alt="">
-                <div class="descripcion-columna3">
-                    <div class="titulo-columna3">
-                        <div class="ofrecido">
-                            Ofrecido por
-                        </div>
-                        <div class="negrita" style="margin-left: 0.5rem;">
-                            {{travel.agency.name}}
-                        </div>
-                    </div>
-                    <div class="fecha-registro">
-                        {{travel.createdDate}}
-                    </div>
-                </div>
                 <div class="precio">
                     $ {{travel.price}}.00
                 </div>
+
+                <div class="fecha-registro">
+                    {{travel.creationDate}}
+                </div>
             </div>
-            <div></div>
         </div>
         <div class="descripcion-final">
             {{travel.description}}
@@ -59,14 +41,14 @@
     </div>
 
 
-    <div id="map" class="map_"></div>
+    
 
     <div class="columna_2">
 
         <div class="izquierda">
             <div class="titulo-boton-actividad">
                 <div class="negrita">Las actividades que realizarás</div>
-                <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateActivityDialog()">Nueva actividad</button>
+                <div class=""></div>
             </div>
 
             <div class="lista_tips" *ngFor="let activity of travel.activities">
@@ -77,25 +59,7 @@
                     <div class="negrita_activity">{{activity.name}}</div>
                     <div class="descripcion_activity">{{activity.description}}</div>
                 </div>
-                <div class="boton-edit" (click)="deleteActivity(activity.id)">
-                    <mat-icon class="point">delete</mat-icon>
-                </div>
-            </div>
-        </div>
-
-        <div class="derecha">
-            <div class="titulo-boton-actividad">
-                <div class="negrita">Es bueno saberlo</div>
-                <button mat-raised-button color="primary" style="background-color: #ace9fd; color: #000000" (click)="openCreateTipDialog()">Nuevo tip</button>
-            </div>
-            <div class="lista_tips" *ngFor="let tip of travel.tips">
-                <mat-icon class="point">radio_button_checked</mat-icon>
-                <div class="titulo_activite">
-                    <div class="descripcion_activity">{{tip.description}}</div>
-                </div>
-                <div class="boton-edit">
-                    <mat-icon class="point">delete</mat-icon>
-                </div>
+                <div class=""></div>
             </div>
         </div>
 

@@ -14,26 +14,19 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { DevicesIotComponent } from './iot-managament/devices-iot/devices-iot.component';
 import { TravelDescriptionComponent } from './experience-design/travel-description/travel-description.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './experience-design/search/search.component';
 import {MatInputModule} from '@angular/material/input';
-import { CreateTravelComponent } from './experience-design/create-travel/create-travel.component';
 import { ProfileAgencyComponent } from './account-agency/profile-agency/profile-agency.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
-import { CreateActivitiesComponent } from './experience-design/create-activities/create-activities.component';
-import { CreateTipComponent } from './experience-design/create-tip/create-tip.component';
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterFormComponent } from './auth/components/register-form/register-form.component';
 import { PricingPageComponent } from './experience-design/pages/pricing-page/pricing-page.component';
 import { HomeComponent } from './xperience-desing/home/home.component';
-import { IotMilestoneComponent } from './iot-managament/iot-milestone/iot-milestone.component';
-import { CreateDeviceDialogComponent } from './iot-managament/components/create-device-dialog/create-device-dialog.component';
-import { MetricsDeviceComponent } from './iot-managament/pages/metrics-device/metrics-device.component';
 // import { CanvasJS } from 'canvasjs'; 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
@@ -43,21 +36,14 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     HeaderComponent,
     TravelsComponent,
     AgenciesComponent,
-    DevicesIotComponent,
     TravelDescriptionComponent,
     SearchComponent,
-    CreateTravelComponent,
     ProfileAgencyComponent,
-    CreateActivitiesComponent,
-    CreateTipComponent,
     RegisterFormComponent,
     PricingPageComponent,
     PricingCardComponent,
     LoginComponent,
-    HomeComponent,
-    IotMilestoneComponent,
-    CreateDeviceDialogComponent,
-    MetricsDeviceComponent,
+    HomeComponent
   ],
     imports: [
         BrowserModule,

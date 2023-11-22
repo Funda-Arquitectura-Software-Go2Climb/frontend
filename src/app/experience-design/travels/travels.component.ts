@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Travel } from 'src/app/models/travel';
-import { TravelService } from './travel.service';
 import { TestBed } from '@angular/core/testing';
 import { Route, Router } from '@angular/router';
+import { MicroService } from 'src/app/models/micros/microservice';
+import { MicroServiceService } from 'src/app/services/micro-service.service';
 
 
 
@@ -12,48 +12,36 @@ import { Route, Router } from '@angular/router';
   styleUrls: ['./travels.component.css']
 })
 export class TravelsComponent implements OnInit {
-  travels: Travel[] = []; // Arreglo para almacenar los datos de viaje
+  services: MicroService[] = [];
   descriptions: string[] =[]
-  constructor(private travelService: TravelService, private router: Router) {
+  constructor(private router: Router, 
+    private microService: MicroServiceService
+    ) {
   }
 
   ngOnInit() {
-    this.getTravels();
+    this.getServices();
   }
 
-  getTravels() {
-    this.travelService.getTravels().subscribe(
-      (travels) => {
-        this.travels = travels;
-        console.log(this.travels)
+  getServices() {
+    this.microService.getAllServices().subscribe(
+      (services) => {
+        this.services = services;
+        console.log(this.services)
         this.reduceCaracter();
       },
       (error) => {
-        console.error('Error al obtener los viajes:', error);
+        console.error('Error al obtener los servicios:', error);
       }
     );
   }
 
   reduceCaracter() {
-    // Llenar el arreglo descriptions con las descripciones originales
-    this.descriptions = this.travels.map(travel => travel.description);
-  
-    console.log("Descripciones originales: ");
-    console.log(this.descriptions);
-  
-    // Actualizar cada descripción según las condiciones dadas
+    this.descriptions = this.services.map(travel => travel.description);
+
     this.descriptions = this.descriptions.map(description => {
       return description.length > 43 ? description.substring(0, 43) + '...' : description + '...';
     });
-  
-    console.log("Descripciones actualizadas: ");
-    console.log(this.descriptions);
-  }
-  
-  condition(e: number, texto: string) {
-    if(e>=47) return true;
-    if(e>texto.length) return true;
-    return false;
   }
 
   seeDetails(i:any){
