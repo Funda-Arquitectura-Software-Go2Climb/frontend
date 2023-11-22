@@ -14,4 +14,9 @@ export class HeaderComponent {
   perfil(){
     this.router.navigate(['/profile-agency']);
   }
+
+  logout(){
+    localStorage.removeItem('access');
+    this.router.navigate(['/login']);
+  }
 }

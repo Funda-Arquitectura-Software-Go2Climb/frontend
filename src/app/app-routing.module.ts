@@ -9,18 +9,20 @@ import {RegisterFormComponent} from "./auth/components/register-form/register-fo
 import {PricingPageComponent} from "./experience-design/pages/pricing-page/pricing-page.component";
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './xperience-desing/home/home.component';
+import { SeguridadGuard } from './seguridad.guard';
+
 
 
 const routes: Routes = [
-  {path: 'list-agencies', component:AgenciesComponent},
-  {path: 'list-travels', component:TravelsComponent},
-  {path: 'travel-description', component:TravelDescriptionComponent},
-  {path: 'search-travels', component:SearchComponent},
-  {path: 'profile-agency', component:ProfileAgencyComponent},
   {path: 'register', component:RegisterFormComponent},
-  {path: 'pricing', component:PricingPageComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent},
+  {path: 'list-agencies', component:AgenciesComponent, canActivate: [SeguridadGuard]},
+  {path: 'list-travels', component:TravelsComponent, canActivate: [SeguridadGuard]},
+  {path: 'travel-description', component:TravelDescriptionComponent, canActivate: [SeguridadGuard]},
+  {path: 'search-travels', component:SearchComponent, canActivate: [SeguridadGuard]},
+  {path: 'profile-agency', component:ProfileAgencyComponent, canActivate: [SeguridadGuard]},
+  {path: 'pricing', component:PricingPageComponent, canActivate: [SeguridadGuard]},
+  {path: 'home', component: PricingPageComponent, canActivate: [SeguridadGuard]},
   {path: '**', redirectTo: 'login', pathMatch: 'full'},
 ];
 

@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class MicroAgencyService {
 
   private apiUrl = 'https://go2climb-apigateway.onrender.com/api/v1/agencies'; 
+  
 
   constructor(private http: HttpClient) {}
 

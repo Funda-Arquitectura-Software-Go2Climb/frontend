@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class MicroServiceService {
 
-  private apiUrl = 'https://servicemicro.azurewebsites.net/api/v1/service';
+  private apiUrl = 'https://go2climb-apigateway.onrender.com/api/v1/service';
 
 constructor(private http: HttpClient) {}
 
